@@ -2,14 +2,96 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
-export default function Home() {
+import fs from "fs";
+import matter from "gray-matter";
+import Link from "next/link";
+
+
+export async function getStaticProps() {
+  // get the post
+  const files = fs.readdirSync("posts");
+  const posts = files.map((filename) => {
+    const slug = filename.replace(".md", "");
+    const readFiles = fs.readFileSync(`posts/${filename}`);
+    const { data: frontMatter } = matter(readFiles);
+
+    return {
+      slug,
+      frontMatter,
+    };
+  });
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+export default function Home({ posts }) {
+  console.log(`posts: ${posts}`);
   return (
     <div>
       <Header></Header>
+      <div class='container-fluid section1'>
+        <div>
+          <p class='title'>LOOCK BLOG</p>
+        </div>
+        {/* <p>Discover stories, thinking, and expertise from writers on any topic.</p> */}
+        {/* <button type="button" class="btn btn-dark">Dark</button> */}
+      </div>
+      <main>
+        <div className='container post-container'>
+          {posts?.map((post) => {
+            return (
+              <Link key={`${post.slug}`} href={`posts/${post.slug}`}>
+                <a>
+                  <div class="post-section">
+                    <div class="post d-flex flex-direction-row">
+                      <p class='article-number'>{post.frontMatter.no}</p>
+                      <div class='article'>
+                        <h1 className='text-xl py-1 post-title'>{post.frontMatter.title}</h1>
+                        <p>{post.frontMatter.desc}</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            );
+          })}
+        </div>
+      </main>
       <Footer></Footer>
     </div>
-    
-  )
+  );
 }
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <Header></Header>
+//       <div class='container-fluid section1'>
+//         <div>
+//           <p class='title'>LOOCK BLOG</p>
+//         </div>
+//         {/* <p>Discover stories, thinking, and expertise from writers on any topic.</p> */}
+//         {/* <button type="button" class="btn btn-dark">Dark</button> */}
+//       </div>
+//       <div class="container post-section">
+//         <div class="post d-flex flex-direction-row">
+//           <p class='article-number'>01</p>
+//           <div class='article'>
+//             <p>Title</p>
+//             <p>Content</p>
+//             <p>Author</p>
+//           </div>
+//         </div>
+//       </div>
+//       <Footer></Footer>
+//     </div>
+
+//   )
+// }

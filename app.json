@@ -1,0 +1,16 @@
+{
+    "EID": "0110",
+    "nom": "NJOGANG TCHOUAMO",
+    "prenom": "Ronel",
+    "adresse": "37 quai de grenelle 75015 Paris",
+    "Cours":[
+        {"code":"BD-015", "titre":"Base de données avancées", "Desc":"Apprendre a modéliser et a manager une base de données SQL et NoSQL", "credit":"5"},
+        {"code":"OS-251", "titre":"Système d'exploitation", "Desc":"Apprendre le fonctionnement d'un OS, ses composants et le mode de repartition des tâches", "credit":"3"},
+        {"code":"TECH-986", "titre":"technologies web", "Desc":"Apprendre a créer des applications web avec les dernières technologies", "credit":"5"}
+    ],
+    "prerequis":[
+        {"code":"BD-014", "titre":"Base de données", "Desc":"Apprendre les fondammentaux sur les bases de données et leur modélisation", "credit":"5"},
+        {"code":"UML-110", "titre":"UML", "Desc":"Apprendre a modéliser des systèmes a l'aide d'UML et comprendre son utilité", "credit":"4"}
+    ]
+    
+}
