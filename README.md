@@ -1,23 +1,39 @@
-## Getting Started with Next JS - Lab 4
+## WEB TECHNOLOGIE PROJET
 
-To launch the code, first, run the development server:
+<p>Our projet is in two parts:</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### First part : Server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Second part : Client
 
-##Test
+<p>In this part, we used different modules to easily improve our projet :
 
-To test the dynamic routing, you can use these links:
-[http://localhost:3000/articles/cd](http://localhost:3000/cd)
-[http://localhost:3000/article/ssr](http://localhost:3000/ssr)
+#### 1- Frameworks :
 
-##Structure
 
-For this work, we created 02 files containing our articles data. Those files are located at the root of our directory
+#### 2- Styles :
 
-We have a js file name "[id].js" which is responsible of getting specific post informations
+
+
+#### 3- Rendering :
+
+
+</p> 
+
+<div align ="center"
+
+#### Les contributeurs :
+
+<li>Adama KOUYATE</p>
+<li>Ronel NJOGANG</p>
+
+#### Nous contacter :
+
+<a href="mailto:assekouyate66@gmail.com?subject=Bonjour!">
+    <img alt="assekouyate66@gmail.com" height="40px" width="50px" src="https://th.bing.com/th/id/OIP.lPC9N7iMcMjHdmKkCGjLOAHaEK?pid=ImgDet&rs=1"/>
+
+<a href="https://www.linkedin.com/feed/">
+    <img alt="Linkedin Adama KOUYATE" height="40px" width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" />
+    
+    
+ </div>
