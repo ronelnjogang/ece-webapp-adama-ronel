@@ -39,14 +39,13 @@ export default function Home({ posts }) {
         <div>
           <p class='title'>LOOCK BLOG</p>
         </div>
-        {/* <p>Discover stories, thinking, and expertise from writers on any topic.</p> */}
-        {/* <button type="button" class="btn btn-dark">Dark</button> */}
+ 
       </div>
       <main>
         <div className='container post-container'>
           {posts?.map((post) => {
             return (
-              <Link key={`${post.slug}`} href={`posts/${post.slug}`}>
+              <Link key={`${post.slug}`} href={`articles/${post.slug}`}>
                 <a>
                   <div class="post-section">
                     <div class="post d-flex flex-direction-row">
@@ -68,30 +67,3 @@ export default function Home({ posts }) {
     </div>
   );
 }
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <Header></Header>
-//       <div class='container-fluid section1'>
-//         <div>
-//           <p class='title'>LOOCK BLOG</p>
-//         </div>
-//         {/* <p>Discover stories, thinking, and expertise from writers on any topic.</p> */}
-//         {/* <button type="button" class="btn btn-dark">Dark</button> */}
-//       </div>
-//       <div class="container post-section">
-//         <div class="post d-flex flex-direction-row">
-//           <p class='article-number'>01</p>
-//           <div class='article'>
-//             <p>Title</p>
-//             <p>Content</p>
-//             <p>Author</p>
-//           </div>
-//         </div>
-//       </div>
-//       <Footer></Footer>
-//     </div>
-
-//   )
-// }

@@ -1,8 +1,12 @@
 {
-    "EID": "0110",
+    "_id": "0110",
     "nom": "NJOGANG TCHOUAMO",
     "prenom": "Ronel",
-    "adresse": "37 quai de grenelle 75015 Paris",
+    "adresse": {
+        "rue": "37 quai de grenelle",
+        "code_postal":"75015",
+        "ville": "Paris"
+    },
     "Cours":[
         {"code":"BD-015", "titre":"Base de données avancées", "Desc":"Apprendre a modéliser et a manager une base de données SQL et NoSQL", "credit":"5"},
         {"code":"OS-251", "titre":"Système d'exploitation", "Desc":"Apprendre le fonctionnement d'un OS, ses composants et le mode de repartition des tâches", "credit":"3"},
@@ -13,4 +17,70 @@
         {"code":"UML-110", "titre":"UML", "Desc":"Apprendre a modéliser des systèmes a l'aide d'UML et comprendre son utilité", "credit":"4"}
     ]
     
+},
+
+//student
+{
+    "_id": <ObjectID0101>,
+    "nom": "NJOGANG TCHOUAMO",
+    "prenom": "Ronel",
+    "rue": "37 quai de grenelle",
+    "code_postal":"75015",
+    "ville": "Paris"
 }
+
+//course
+{
+    "code":"BD-015", 
+    "titre":"Base de données avancées", 
+    "Desc":"Apprendre a modéliser et a manager une base de données SQL et NoSQL", 
+    "credit":"5"
+}
+
+//participe(relation between course and student)
+{
+    "student_id":<ObjectID0101>, 
+    "cours_code":"BD-015", 
+    "Date": 2022-10-03
+}
+
+
+{
+    _id:"001",
+    email:"ronelnjogang1@gmail.com",
+    nom:"NJOGANG TCHOUAMO Ronel",
+    pages:[
+        {
+            _id:"124",
+            page:"www.page.fr",
+            visites:"2"
+        },
+        {
+            _id:"154",
+            page:"www.cakelover.fr",
+            visites:"1"
+        }
+    ]
+
+}
+
+
+{
+    _id:"124",
+    page:"www.page.fr",   
+    visiteurs:[
+        {
+            _id:"001",
+            email:"ronelnjogang1@gmail.com",
+            nom:"NJOGANG TCHOUAMO Ronel",
+            visites:"2",
+        }
+        {
+            _id:"002",
+            email:"emmalet@gmail.com",
+            nom:"CHEVENOL Emma",
+            visites:"1",
+        }
+    ]
+},
+

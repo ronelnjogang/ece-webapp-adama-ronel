@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import md from "markdown-it";
 
 import Header from '../../components/Header'
+import Link from 'next/link'
 
 
 export async function getStaticPaths() {
@@ -12,7 +13,7 @@ export async function getStaticPaths() {
   const files = fs.readdirSync("posts");
   const paths = files.map((filename) => ({
     params: {
-       id: filename.replace(".md", ""),
+      id: filename.replace(".md", ""),
     },
   }));
 
@@ -22,10 +23,10 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: {  id } }) {
+export async function getStaticProps({ params: { id } }) {
   // get content for each blog
-  console.log( id);
-  const mdfile = fs.readFileSync(`posts/${ id}.md`);
+  console.log(id);
+  const mdfile = fs.readFileSync(`posts/${id}.md`);
   const { data: frontMatter, content } = matter(mdfile);
 
   return {
@@ -41,19 +42,19 @@ function BlogPage({ frontMatter, content }) {
   console.log(content);
   return (
     <>
-    <Header></Header>
-    <div class='container-fluid section1'>
+      <Header></Header>
+      <div className='container-fluid section1'>
         <div>
-          <p class='title'>{frontMatter.title}</p>
+          <p className='title'>{frontMatter.title}</p>
         </div>
       </div>
-    <div className='container p-10'>
-      <article
-        className='prose lg:prose-xl'
-        dangerouslySetInnerHTML={{ __html: md().render(content) }}
-      />
-    </div>
-  </>
+      <div className='container p-10'>
+        <article
+          className='prose lg:prose-xl'
+          dangerouslySetInnerHTML={{ __html: md().render(content) }}
+        />
+      </div>
+    </>
   );
 }
 
