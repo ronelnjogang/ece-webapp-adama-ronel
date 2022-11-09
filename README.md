@@ -1,14 +1,10 @@
-## Getting Started with Next JS - Lab 4
+## WEB TECHNOLOGIE PROJET
 
-To launch the code, first, run the development server:
+<p>Our projet is in two parts:</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### First part : Server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Second part : Client
 
 ## Test
 

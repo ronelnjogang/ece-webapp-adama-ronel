@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css"
 import "../styles/style.css"
+import Layout from "../components/layout"
 
 
 import '../styles/globals.css'
@@ -11,7 +12,10 @@ function MyApp({ Component, pageProps }) {
     import("bootstrap/dist/js/bootstrap");
 },[]);
 
-  return <Component {...pageProps} />
+  return (
+  <Layout>
+    <Component {...pageProps} />
+  </Layout>)
   
 }
 

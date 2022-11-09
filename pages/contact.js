@@ -1,10 +1,7 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 export default function Contact() {
     return (
         <>
-            <Header></Header>
             <div class='container-fluid section1 bg-teal-100 border-t-4 border-teal-500'>
                 <div>
                     <p class='title'>LOOCK BLOG</p>
@@ -21,7 +18,6 @@ export default function Contact() {
                     info@loock.fr
                 </div>
             </div>
-            <Footer></Footer>
         </>
     )
 }

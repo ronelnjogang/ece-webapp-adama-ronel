@@ -4,7 +4,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
 
-import Header from '../../components/Header'
 import Link from 'next/link'
 
 
@@ -42,13 +41,10 @@ function BlogPage({ frontMatter, content }) {
   console.log(content);
   return (
     <>
-      <Header></Header>
-      <div className='container-fluid section1'>
-        <div>
-          <p className='title'>{frontMatter.title}</p>
-        </div>
+      <div className="title_box">
+        <p className='title'>{frontMatter.title}</p>
       </div>
-      <div className='container p-10'>
+      <div className='container p-10 article_block'>
         <article
           className='prose lg:prose-xl'
           dangerouslySetInnerHTML={{ __html: md().render(content) }}
