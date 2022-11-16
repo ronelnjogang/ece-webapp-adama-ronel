@@ -23,8 +23,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { id } }) {
-  // get content for each blog
-  console.log(id);
+  // get content of specific blog
+  console.log("id:" + id);
   const mdfile = fs.readFileSync(`posts/${id}.md`);
   const { data: frontMatter, content } = matter(mdfile);
 

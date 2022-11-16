@@ -23,6 +23,7 @@
 
 .article_block{
     width: 65%;
+    margin-bottom: 40px;
 }
 .section1{
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../src/img/water.jpg);
@@ -54,6 +55,7 @@
     display: flex;
     justify-content: space-between;
     padding: 3%;
+
 }
 .post-section{
     margin-right: 15px;
@@ -67,6 +69,5 @@
 }
 
 .page-footer{
-    margin-top: 50px;
     background-color: rgb(34, 34, 34);
 }
