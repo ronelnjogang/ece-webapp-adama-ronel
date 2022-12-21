@@ -31,6 +31,12 @@ export default function Header() {
                 </Link>
 
               </li>
+
+              <li>
+                <Link href="/login-controlled">
+                  <button type="button" class="btn btn-dark">Log in</button>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -16,38 +16,50 @@ export default function LoginControll() {
     e.preventDefault();
     let form = e.target;
     const data = new FormData(form);
-    for( let i of data){
-        console.log(i[0], i[1]);
+    for (let i of data) {
+      console.log(i[0], i[1]);
     }
 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Sign in</h2>
-      <div>
-        <input
-          type="text"
-          name="username"
-          placeholder="username"
-          value={data1}
-          onChange={handleInput1}
-        />
-        <div>
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            value={data2}
-            onChange={handleInput2}
-          />
+    <div class="background">
+      <div class="form-box">
+        <div class='form-text'>
+          <p class="form-title">Login</p>
+          <p>Log in to access your user space</p>
         </div>
+
+        <form onSubmit={handleSubmit} class="form">
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="username"
+              value={data1}
+              onChange={handleInput1}
+              class="input-text"
+            />
+            <div>
+              <input
+                type="password"
+                name="password"
+                placeholder="password"
+                value={data2}
+                onChange={handleInput2}
+                class="input-text"
+              />
+            </div>
+          </div>
+          <div>
+            <button onSubmit={handleSubmit} class="formBtn btn btn-primary">Submit</button>
+          </div>
+          <h1> {data1} </h1>
+          <h1> {data2} </h1>
+        </form>
       </div>
-      <div>
-        <button onSubmit={handleSubmit}>Submit</button>
-      </div>
-      <h1> {data1} </h1>
-      <h1> {data2} </h1>
-    </form>
+    </div>
+
+
   );
 }

@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-// import Header from '../components/Header'
-// import Footer from '../components/Footer'
-// import Layout from '../components/Layout'
+
+
 
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
-
+ 
 
 export async function getStaticProps() {
   // get the post
