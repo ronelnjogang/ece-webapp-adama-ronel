@@ -1,10 +1,44 @@
+import { createClient } from '@supabase/supabase-js'
+//  import { supabase } from './../lib/supabaseClient';
 
-export default function Contact() {
+
+export async function getStaticProps() {
+
+    const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+    )
+    // console.log("keys",process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY )
+    // const contacts = await supabase.from('contacts')
+    const { data, error } = await supabase.from('contacts').select()
+    if (error) {
+        throw error
+    }
+    console.log('contacts list:', data);
+
+
+    return {
+        props: {
+            contacts: data,
+        },
+    }
+}
+
+export default function Contact({ contacts }) {
+    // console.log(`contacts: ${contacts}`);
     return (
         <>
-            <div class='container-fluid section1 bg-teal-100 border-t-4 border-teal-500'>
+            {contacts?.map((contact => {
+                return (
+                    <>
+                        <p>{contact.firstname}</p>
+                        <p>{contact.lastname}</p>
+                    </>
+                )
+            }))}
+            <div className='container-fluid section1 bg-teal-100 border-t-4 border-teal-500'>
                 <div>
-                    <p class='title'>LOOCK BLOG</p>
+                    <p className='title'>LOOCK BLOG</p>
                 </div>
             </div>
             <div className='container contact-block'>

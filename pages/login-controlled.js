@@ -52,6 +52,9 @@ export default function LoginControll() {
             </div>
           </div>
           <div>
+            <button class="formBtn btn btn-primary">Github</button>
+          </div>
+          <div>
             <button onSubmit={handleSubmit} class="formBtn btn btn-primary">Submit</button>
           </div>
           <h1> {data1} </h1>
