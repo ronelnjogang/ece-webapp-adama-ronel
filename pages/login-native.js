@@ -1,37 +1,22 @@
-import { useState } from "react";
+import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
+import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
+import Account from '../components/account'
 
-export default function LoginNative() {
-  const onSubmit = (e) => {
-    e.preventDefault();
-    let form = e.target;
-    const data = new FormData(form);
-    for( let i of data){
-        console.log(i[0], i[1]);
-    }
-
-  };
+const Home = () => {
+  const session = useSession()
+  const supabase = useSupabaseClient()
 
   return (
-    <form onSubmit={onSubmit}>
-      <h2>Sign in</h2>
-      <div>
-        username : <input type="text" name="username" placeholder="username" />
-        <div>
-          password : <input type="password" name="password" placeholder="password" />
-        </div>
-      </div>
-      <div>
-        <button onSubmit={onSubmit}>Submit</button>
-      </div>
-    </form>
-  );
-
-  const res = Object.fromEntries(data)
-  fetch('https://reqres.in/api/users/', {
-    method: 'POST', 
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(res)
-  })
+    <div className="container" style={{ padding: '50px 0 100px 0' }}>
+      {!session ? (
+        <Auth 
+        providers={["github", "apple", "google"]}
+        supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
+      ) : (
+        <Account session={session} />
+      )}
+    </div>
+  )
 }
+
+export default Home

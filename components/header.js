@@ -15,26 +15,26 @@ export default function Header() {
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link href="/">
-                  <a className="nav-link active" aria-current="page" href="#">Home</a>
+                  <a className="nav-link active" aria-current="page" href="#">HOME</a>
                 </Link>
 
               </li>
               <li className="nav-item">
                 <Link href="/about">
-                  <a className="nav-link">About us</a>
+                  <a className="nav-link">ABOUT US</a>
                 </Link>
 
               </li>
               <li className="nav-item">
                 <Link href="/contact">
-                  <a className="nav-link">Contact</a>
+                  <a className="nav-link ">CONTACT US</a>
                 </Link>
 
               </li>
 
               <li>
-                <Link href="/login-controlled">
-                  <button type="button" class="btn btn-dark">Log in</button>
+                <Link href="/login-native">
+                  <button type="button" class="btn btn-dark">Join US</button>
                 </Link>
               </li>
             </ul>
