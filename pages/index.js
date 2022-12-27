@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import CreateArticle from './articles/createArticle';
 
 
 import fs from "fs";
@@ -10,6 +10,8 @@ import Link from "next/link";
  
 
 export async function getStaticProps() {
+ 
+  
   // get the post
   const files = fs.readdirSync("posts");
   const posts = files.map((filename) => {
@@ -57,7 +59,11 @@ export default function Home({ posts }) {
           );
         })}
       </div>
-
+      <div>
+      <Link href="/articles/createArticle">     
+      <button type='button' style={{ backgroundColor: 'blue', marginLeft: '800px', fontSize: '14px' }}>Create New Article</button>
+      </Link>
+      </div>
     </main>
   );
 }
