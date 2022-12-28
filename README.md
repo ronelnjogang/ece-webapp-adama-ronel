@@ -1,22 +1,51 @@
-## WEB TECHNOLOGIE PROJET
+# WEB TECHNOLOGIE PROJECT
 
-<p>Our projet is in two parts:</p>
+This project is a professional grade application that is published on GitHub and deployed to Vercel. It contains the following root folders:
 
-### First part : Server
+- `app`: This folder contains the Next.js application that serves as the frontend of the project.
+- `supabase`: This folder contains the configuration for the local Supabase instance that is used as the backend database for the project.
+- `labs` (optional): This folder contains the folders for the labs that were completed as part of this project.
 
-### Second part : Client
+## Tasks and Self-Evaluation
 
-## Test
+### Task 1
 
-To test the dynamic routing, you can use these links:
-[http://localhost:3000/articles/cd](http://localhost:3000/articles/cd)<br/>
-[http://localhost:3000/article/ssr](http://localhost:3000/articles/ssr)
+I implemented feature X by following these steps:
 
-They will lead you to a single post page
+1. 
+2. 
+3. 
 
+I chose to implement it this way because...
 
-## Structure
+Self-evaluation: I believe I did a good job on this task because...
 
-For this work, we created 02 files containing our articles data. Those files are located at the root of our directory in the 'posts' folder
+### Task 2
 
-We have a js file name "[id].js" which is responsible of getting specific post informations and display them.
+I implemented feature Y by following these steps:
+
+1. 
+2. 
+3. 
+
+I chose to implement it this way because...
+
+Self-evaluation: I think I could have done a better job on this task because...
+
+## Deployment
+
+This project is deployed to Vercel and is accessible at [insert publicly accessible domain name here].
+
+## Security and Error Management
+
+To ensure the security of sensitive information, I...
+
+To handle errors, I...
+
+## Environment Variables
+
+I used environment variables to store sensitive information such as API keys. These variables are defined in the Vercel dashboard and are not committed to the repository.
+
+## Course Feedback
+
+I found the course to be... Overall, I thought the structure and content were... One thing I particularly enjoyed was... On the other hand, one thing I think could be improved is...
