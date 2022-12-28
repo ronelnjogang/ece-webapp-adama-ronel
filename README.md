@@ -42,7 +42,7 @@ To ensure the security of sensitive information, we Use :
 
 2. Row Level Security (RLS)
 
-3.Server-side rendering to generate the HTML for our pages on the server
+3. Server-side rendering to generate the HTML for our pages on the server
 
 To handle errors, we use :
 
