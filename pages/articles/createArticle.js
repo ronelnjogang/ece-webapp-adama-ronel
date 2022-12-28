@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
-
+import Link from 'next/link'
 export default function Account({ session }) {
   const supabase = useSupabaseClient()
   const user = useUser()
@@ -74,13 +74,13 @@ export default function Account({ session }) {
     <div className="form-widget">
         
     <div>
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title"  style={{ color: "white" }}>Title</label>
       
         <input id="title" type="text" value={categories || ''}
          onChange={(e) => setTitle(e.target.value) }/>
     </div>
       <div>
-        <label htmlFor="content">Content</label>
+        <label htmlFor="content"  style={{ color: "white" }}>Content</label>
         <input
           id="content"
           type="text"
@@ -89,7 +89,7 @@ export default function Account({ session }) {
         />
       </div>
       <div>
-        <label htmlFor="categories">Categories</label>
+        <label htmlFor="categories"  style={{ color: "white" }}>Categories</label>
         <input
           id="categories"
           type="text"
@@ -98,7 +98,7 @@ export default function Account({ session }) {
         />
       </div>
       <div>
-        <label htmlFor="tags">Tags</label>
+        <label htmlFor="tags"  style={{ color: "white" }}>Tags</label>
         <input
           id="tags"
           type="text"
@@ -118,9 +118,11 @@ export default function Account({ session }) {
       </div>
 
       <div>
-        <button className="button block" onClick={() => supabase.auth.signOut()}>
+      <Link href="/"> 
+        <button className="button block" style={{ backgroundColor: 'red'}} onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>
+        </Link>
       </div>
     </div>
   )
