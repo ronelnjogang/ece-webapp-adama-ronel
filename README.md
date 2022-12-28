@@ -10,7 +10,7 @@ This project is a professional grade application that is published on GitHub and
 
 ### Task 1: Server-Side Rendering
 
-I implemented feature the server-side rendering by following these steps:
+We implemented feature the server-side rendering by following these steps:
 
 1. `npm install --save next`
 
@@ -21,7 +21,7 @@ I implemented feature the server-side rendering by following these steps:
 
 ### Task 2: Client-Side Rendering
 
-I implemented feature the client-side rendering by following these steps:
+We implemented feature the client-side rendering by following these steps:
 
 1. `npm install --save next`
 
