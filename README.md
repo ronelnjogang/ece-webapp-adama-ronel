@@ -12,27 +12,27 @@ This project is a professional grade application that is published on GitHub and
 
 I implemented feature the server-side rendering by following these steps:
 
-1. 'npm install --save next'
+1. `npm install --save next`
 
-2. 'npx create-next-app'
+2. `npx create-next-app`
 
-3. 'npm run dev'
+3. `npm run dev`
 
 
 ### Task 2: Client-Side Rendering
 
 I implemented feature the client-side rendering by following these steps:
 
-1. 'npm install --save next'
+1. `npm install --save next`
 
-2. 'npx create-next-app'
+2. `npx create-next-app`
 
-3.  'npm run dev'
+3. `npm run dev`
 
 
 ## Deployment
 
-This project is deployed to Vercel and is accessible at [https://github.com/ronelnjogang/ece-webapp-adama-ronel].
+This project is deployed to Vercel and is accessible at [here](https://github.com/ronelnjogang/ece-webapp-adama-ronel).
 
 ## Security and Error Management
 
@@ -46,11 +46,11 @@ To ensure the security of sensitive information, we Use :
 
 To handle errors, we use :
 
-1. 'Try-catch' blocks 
+1. `Try-catch` blocks 
 
-2. The 'async-await' pattern
+2. The `async-await` pattern
 
-3. The 'error' event handler 
+3. The `error` event handler 
 
 ## Environment Variables
 
