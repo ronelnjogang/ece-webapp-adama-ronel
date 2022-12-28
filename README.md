@@ -8,44 +8,61 @@ This project is a professional grade application that is published on GitHub and
 
 ## Tasks and Self-Evaluation
 
-### Task 1
+### Task 1: Server-Side Rendering
 
-I implemented feature X by following these steps:
+I implemented feature the server-side rendering by following these steps:
 
-1. 
-2. 
-3. 
+1. 'npm install --save next'
 
-I chose to implement it this way because...
+2. 'npx create-next-app'
 
-Self-evaluation: I believe I did a good job on this task because...
+3. 'npm run dev'
 
-### Task 2
 
-I implemented feature Y by following these steps:
+### Task 2: Client-Side Rendering
 
-1. 
-2. 
-3. 
+I implemented feature the client-side rendering by following these steps:
 
-I chose to implement it this way because...
+1. 'npm install --save next'
 
-Self-evaluation: I think I could have done a better job on this task because...
+2. 'npx create-next-app'
+
+3.  'npm run dev'
+
 
 ## Deployment
 
-This project is deployed to Vercel and is accessible at [insert publicly accessible domain name here].
+This project is deployed to Vercel and is accessible at [https://github.com/ronelnjogang/ece-webapp-adama-ronel].
 
 ## Security and Error Management
 
-To ensure the security of sensitive information, I...
+To ensure the security of sensitive information, we Use :
 
-To handle errors, I...
+1. environment variables to store sensitive information such as API keys
+
+2. Row Level Security (RLS)
+
+3.Server-side rendering to generate the HTML for our pages on the server
+
+To handle errors, we use :
+
+1. 'Try-catch' blocks 
+
+2. The 'async-await' pattern
+
+3. The 'error' event handler 
 
 ## Environment Variables
 
-I used environment variables to store sensitive information such as API keys. These variables are defined in the Vercel dashboard and are not committed to the repository.
+We used environment variables to store sensitive information such as API keys. These variables are defined in the Vercel dashboard and are not committed to the repository.
 
 ## Course Feedback
 
-I found the course to be... Overall, I thought the structure and content were... One thing I particularly enjoyed was... On the other hand, one thing I think could be improved is...
+We found the course to be very informative and helpful. Overall, we thought the structure and content were well organized and covered a wide range of topics. One thing we particularly enjoyed was the practical examples and hands-on exercises, which helped us better understand the concepts. On the other hand, one thing we think could be improved is the availability of additional resources or materials for further learning.
+
+## Contributors
+
+- [Adama KOUYATE](https://github.com/ece-webapp-adama-kouyate)
+- [Ronel NJOGANG](https://github.com/ronelnjogang)
+
+
